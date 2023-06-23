@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mata Mosquito - The Game</title>
+	<!--Custom Style-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+	<div class="painel">
+		<div class="vidas">
+			<img id="v1" src="./Assets/imagens/coracao_cheio.png">
+			<img id="v2" src="./Assets/imagens/coracao_cheio.png">
+			<img id="v3" src="./Assets/imagens/coracao_cheio.png">
+		</div>			
+		<div class="cronometro">
+			Tempo Restante: <span id="cronometro"></span>
+		</div>
+	</div>
+	
+
+<script>
+	document.getElementById("cronometro").innerHTML = tempo;
+
+	var criaMosquito = setInterval(function(){
+		posicaoRandomica();	
+	},criaMosquitoTempo)
+</script>
+<noscript><p>este navegador não está a executar scripts. Por favor habilite esta função para visualizar corretamente a página ou utilize outro navegador que utilize esta função.</p></noscript>
+</body>
+</html>
